@@ -1,0 +1,151 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="bootstrap.css">
+    <!-- <script src="javascript.js"></script>  -->
+    <!-- <script src="jquarilink.js"></script>   -->
+    <script>
+        let Students = [
+            { "id": 1, "studentid": 342, "name": "closeup", "age": 20, "gender": "female" },
+            { "id": 2, "studentid": 343, "name": "ujju", "age": 21, "gender": "female" },
+            { "id": 3, "studentid": 344, "name": "munni", "age": 22, "gender": "female" }
+        ];
+        function loadData() {
+            const tableHeaderString = `<tr style="background-color:gray;color:white"><th>ID</th><th>StudentID</th><th>Name</th><th>Age</th><th>Gender</th><th>Action</th></tr>`;
+            let tableRowString = '';
+            Students.map((student, index) => {
+                let btnEdit = `<button type="button" id="${student.id}" onclick="editRecord()" class="btn btn-success">Edit</button>`;
+                let btnDelete = `<button type="button" id="${student.id}" onclick="deleteRecord()" class="btn btn-danger">delete</button>`;
+                tableRowString += `<tr><td>${index + 1}</td><td>${student.studentid}</td><td>${student.name}</td><td>${student.age}</td></td><td>${student.gender}</td><td>${btnEdit} ${btnDelete}</td>`;
+            });
+            const tableString = `<table class="table table-striped">${tableHeaderString}${tableRowString}</table>`;
+            document.getElementById("table").innerHTML = tableString;
+        }
+        function addData() {
+            const studentid = document.getElementById("studentid").value;
+            const name = document.getElementById("name").value;
+            const age = document.getElementById("age").value;
+            const gender = (document.getElementById("male").checked == true) ? "male" : "female";
+            const record = { id: Students.length + 1, studentid: studentid, name: name, age: age, gender: gender };
+            Students.push(record);
+            loadData();
+        }
+        function deleteRecord() {
+            Students = Students.filter(student => (student.id !== parseInt(event.target.id)));
+            loadData();
+        }
+        function editRecord() {
+            Students.map(student => {
+                if (student.id === parseInt(event.target.id)) {
+                    document.getElementById("id").value = student.id;
+                    console.log(student.id);
+                    document.getElementById("studentid").value = student.studentid;
+                    document.getElementById("name").value = student.name;
+                    document.getElementById("age").value = student.age;
+                    (student.gender == "male") ? document.getElementById("male").checked = true : document.getElementById("female").checked = true;
+                }
+
+            })
+        }
+        function addDatas() {
+            const id = document.getElementById("id").value;
+            const studentid = document.getElementById("studentid").value;
+            const name = document.getElementById("name").value;
+            const age = document.getElementById("age").value;
+            const gender = (document.getElementById("male").checked == true) ? "male" : "female";
+            const record = { id: Students.length + 1, id: id, studentid: studentid, name: name, age: age, gender: gender };
+            Students.map(student => {
+                if (student.id === parseInt(id)) {
+                    student.id = id;
+                    student.name = name;
+                    student.age = age;
+                    student.gender = gender;
+                }
+                return student;
+            })
+            loadData();
+        }
+        function searchData(){
+            Students=Students.filter(student=>
+            student.name.toLowerCase().indexOf(event.target.value.toLowerCase()) >= 0
+            )
+            loadData(); 
+        }
+
+
+    </script>
+    <style>
+        tr:hover {
+            background-color: lavender;
+        }
+    </style>
+</head>
+
+
+
+<body onload="loadData()"><br>
+    <div class="row">
+        <div class="col-sm-4"></div>
+        <div class="col-sm-1"></div>
+        <div class="col-sm-2">
+            <h3>Crud Operations</h3>
+        </div>
+        <div class="col-sm-1"></div>
+        <div class="col-sm-4"></div>
+    </div><br>
+    <div class="row">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-1"><input type="text" id="id" class="form-control"></div>
+        <div class="col-sm-1"><label for="name"></label>StudentId:
+            </label></div>
+        <div class="col-sm-1">
+            <input type="text" id="studentid" class="form-control">
+        </div>
+        <div class="col-sm-1"></div>
+        <div class="col-sm-1"><label for="name">StudentName:
+            </label></div>
+        <div class="col-sm-1">
+            <input type="text" id="name" class="form-control">
+        </div>
+        <div class="col-sm-2"></div>
+    </div><br>
+    <div class="row">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-1"><label for="age">Age:
+            </label></div>
+        <div class="col-sm-1">
+            <input type="text" id="age" placeholder="age" class="form-control">
+        </div>
+        <div class="col-sm-1"></div>
+        <div class="col-sm-1"><label for="gender">Gender:
+            </label></div>
+        <div class="col-sm-1">Male
+            <input type="radio" id="male" name="gender" value="male"></div>
+
+        <div class="col-sm-1">Female
+            <input type="radio" id="female" name="gender" value="female"></div>
+
+        <div class="col-sm-2"></div>
+    </div><br>
+    <div class="row">
+        <div class="col-sm-4"></div>
+        <div class="col-sm-1">
+            <button type="button" class="btn btn-primary" onclick="addData()">Register</button></div>
+            <div class="col-sm-1">
+            <button type="button" class="btn btn-primary" onclick="addDatas()">Update</button></div>
+            <div class="col-sm-2">
+            <input type="text" id="search" onkeyup="searchData()" placeholder="search here......">
+
+
+        </div>
+
+        <div class="col-sm-4"></div>
+    </div><br>
+
+    <div class="row">
+        <div class="col-sm-12" id="table"></div>
+    </div>
+
+</body>
+
+</html>

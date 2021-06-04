@@ -1,0 +1,73 @@
+<html>
+    <head>
+
+    </head>
+
+     <body>
+
+        <form>
+
+            <input type="text" placeholder="enter mobile number" id="mobile_number" size="20">  <button onclick="createOTP()">Get OTP</button> <br><br>
+            <input type="password" placeholder="enter password" id="password" size="20"><br><br>
+            <input type="text" placeholder="enter otp" id="otp" size="20"><br><br>
+            <button onclick="validate()">Submit</button>
+
+        </form>
+
+        <script>
+         
+               function createOTP(){
+                    event.preventDefault();
+                  var mobile_number= document.getElementById("mobile_number").value;
+
+                  if(mobile_number == "9010101010"){
+                     alert("Your otp to login is 1092");
+                  }
+                  else
+                  {
+                      alert("incorrect mobile number")
+                  }
+               }
+
+                function validate(){
+                  var password = document.getElementById("password").value;
+                  var otp= document.getElementById("otp").value;
+                    // to check whether the user is valid user or not
+
+                       if(password != "abc"){
+                           alert("Password incorrect!");
+                           return;
+                       }
+                       if(otp != "1092"){
+                        alert("otp incorrect!");
+                           return;
+                       }
+
+                     if(password = "abc" && otp=="1092"){
+                          redirect(true);
+                     }
+                     else
+                     {
+                         redirect(false);
+                     }
+                }
+                var redirect=function(result){
+                    event.preventDefault();
+                     alert("I am in redirect!");
+                    if(result == true){
+                        console.log("result",result);
+                      window.location.href="credentials.html";
+                      redirect=null;
+                    }
+                    else
+                    {
+                        alert("Wrong credentials");
+                        redirect=null;
+                    }
+                }
+               
+        
+        </script>
+
+     </body>
+</html>

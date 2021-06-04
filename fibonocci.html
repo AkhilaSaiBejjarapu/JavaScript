@@ -1,0 +1,51 @@
+<html>
+<head>
+    <link rel="stylesheet" href="bootstrap.css">
+    <script src="javascript.js"></script>
+    <script>
+        function checkFiboc(){
+            var num = document.getElementById("number").value;
+            console.log(num);
+            var  f1=0,f2=1,n,temp,i;
+            console.log(f1);
+            n=document.getElementById("number").value;
+            for (var i = 1; i <=n; i++)
+            {
+               temp=f1+f2;
+               f1=f2;
+               f2=temp; 
+            }
+            document.getElementById("result").value=f1;
+        }
+    </script>
+</head>
+<body>
+    <div class="container"><br>
+        <div class="row">
+            <div class="col-sm-4"></div>
+            <div class="col-sm-4"><h3>Fibonacci Numbers</h3></div>
+            <div class="col-sm-4"></div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-4"></div>
+            <div class="col-sm-2"><label for="frst">First Number:</label></div>
+            <div class="col-sm-2"><input type="text" id="number" placeholder="enter frst number" class="form-control">
+            </div>
+            <div class="col-sm-4"></div>
+        </div><br>
+        <div class="row">
+            <div class="col-sm-4"></div>
+            <div class="col-sm-2"><label>Result:</label></div>
+            <div class="col-sm-2"><input type="text" id="result" placeholder="result" class="form-control"></div>
+            <div class="col-sm-4"></div>
+        </div><br>
+        <div class="row">
+            <div class="col-sm-6"></div>
+            <div class="col-sm-4"><button type="button" value="submit" class="btn btn-success"
+                    onclick="checkFiboc()">Swap</div>
+            <div class="col-sm-2"></div>
+        </div><br>
+    </div>
+</body>
+</html>

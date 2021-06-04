@@ -1,0 +1,27 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="bootstrap.css">
+    <script src="javascript.js"></script>
+    <script>
+        function checkMulpy() {
+
+            var a = parseInt(document.getElementById("number").value);
+            var b = parseInt(document.getElementById("number1").value);
+            var c = a * b;
+            document.getElementById("result").value = c;
+        }
+    </script>
+</head>
+<body>
+    
+    <label>Enter frst Number:</label>
+    <input type="text" id="number" placeholder="enter frst num" class="form-control">
+    <label>Enter second Number:</label>
+    <input type="text" id="number1" placeholder="enter second num"class="form-control"><br>
+    <button type="button" value="submit" onclick="checkMulpy()" class=" btn btn-warning">SUBMIT</button><br>
+    <label>Result:</label>
+    <input type="text" id="result"><br>
+</body>
+
+</html>

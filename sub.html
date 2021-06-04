@@ -1,0 +1,49 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="bootstrap.css">
+    <script src="javascript.js"></script>
+    <script>
+        function checkSubstract() {
+
+            var a = parseInt(document.getElementById("number").value);
+            var b = parseInt(document.getElementById("number1").value);
+            var c = a-b;
+            document.getElementById("result").value = c;
+        }
+    </script>
+</head>
+
+<body>
+    <div class="container"><br>
+        <div class="row">
+            <div class="col-sm-4"></div>
+            <div class="col-sm-2"><label for="frst">First Number:</label></div>
+            <div class="col-sm-2"><input type="text" id="number" placeholder="enter frst number" class="form-control">
+            </div>
+            <div class="col-sm-4"></div>
+        </div><br>
+        <div class="row">
+            <div class="col-sm-4"></div>
+            <div class="col-sm-2"><label for="second">Second Number:</label></div>
+            <div class="col-sm-2"><input type="text" id="number1" placeholder="enter second number"
+                    class="form-control"></div>
+            <div class="col-sm-4"></div>
+        </div><br>
+        <div class="row">
+            <div class="col-sm-4"></div>
+            <div class="col-sm-2"><label>Result:</label></div>
+            <div class="col-sm-2"><input type="text" id="result" placeholder="result" class="form-control"></div>
+            <div class="col-sm-4"></div>
+        </div><br>
+        <div class="row">
+            <div class="col-sm-6"></div>
+            <div class="col-sm-4"><button type="button" value="submit" class="btn btn-primary"
+                    onclick="checkSubstract()">Submit</div>
+            <div class="col-sm-2"></div>
+        </div><br>
+        
+    </div>
+</body>
+
+</html>

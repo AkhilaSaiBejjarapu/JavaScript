@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <script>
+            var array=[];
+            function unshift(){
+                var a=document.getElementById("1").value;
+                var b=array.push(a);
+                 document.getElementById("2").value=b;
+                
+            }
+        </script>
+        <body>
+            <input type="text" id="1">
+            <button onclick="unshift()">unshift</button>
+            <input type="text"  id="2">
+        </body>
+    </head>
+</html>

@@ -1,0 +1,221 @@
+<html>
+
+<head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+        <link rel="stylesheet"
+                href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script>
+                function infoChange1() {
+                        var a = document.getElementById("btn1").value;
+                        console.log(a);
+                        document.getElementById("disp1").value += a;
+                        console.log(disp1);
+                }
+
+                function infoChange2() {
+                        var b = document.getElementById("btn2").value;
+                        console.log(b);
+                        document.getElementById("disp1").value += b;
+                        console.log("disp1");
+                }
+                function infoChange3() {
+                        var c = document.getElementById("btn3").value;
+                        document.getElementById("disp1").value += c;
+                }
+                function infoChange4() {
+                        var d = document.getElementById("btn4").value;
+                        document.getElementById("disp1").value += d;
+                }
+                function infoChange5() {
+                        var e = document.getElementById("btn5").value;
+                        document.getElementById("disp1").value += e;
+                }
+                function infoChange6() {
+                        var f = document.getElementById("btn6").value;
+                        document.getElementById("disp1".value) += f;
+                }
+                function infoChange7() {
+                        var g = document.getElementById("btn7").value;
+                        document.getElementById("disp1").value += g;
+                }
+                function infoChange8() {
+                        var h = document.getElementById("btn8").value;
+                        document.getElementById("disp1").value += h;
+                }
+                function infoChange9() {
+                        var i = document.getElementById("btn9").value;
+                        document.getElementById("disp1").value += i;
+                }
+                function infoChange10() {
+                        var j = document.getElementById("btn10").value;
+                        document.getElementById("disp1").value += j;
+                }
+                function infoChange11() {
+                        var k = document.getElementById("btn11").value;
+                        document.getElementById("disp1").value += k;
+                }
+                function infoChange12() {
+                        var l = document.getElementById("btn12").value;
+                        document.getElementById("disp1").value += l;
+                }
+                function infoChange13() {
+                        var m = document.getElementById("btn13").value;
+                        document.getElementById("disp1").value += m;
+                }
+                function infoChange14() {
+                        var n = document.getElementById("btn14").value;
+                        document.getElementById("disp1").value += n;
+                }
+                function infoChange15() {
+                        var o = document.getElementById("btn15").value;
+                        document.getElementById("disp1").value += o;
+                }
+                function infoChange16() {
+                        var p = document.getElementById("btn16").value;
+                        document.getElementById("disp1").value += p;
+                }
+                function infoChange17() {
+                        var q = document.getElementById("btn17").value;
+                        document.getElementById("disp1").value += q;
+                }
+                function infoChange18() {
+                        var r = document.getElementById("btn18").value;
+                        document.getElementById("disp1").value += r;
+                }
+                function infoChange19() {
+                        var s = document.getElementById("btn19").value;
+                        document.getElementById("disp1").value += s;
+                }
+                function performOp() {
+                        var op = document.getElementById("disp1").value;
+                        var pp = eval(op);
+                        document.getElementById("disp1").value = pp;
+                }
+                function backSpace() {
+                        var bs = document.getElementById("disp1").value;
+                        var le = bs.length - 1;
+                        var ss = bs.substring(0, le);
+                        document.getElementById("disp1").value = ss;
+                }
+                function clearData() {
+                        document.getElementById("disp1").value = "";
+                }
+        </script>
+</head>
+
+<body>
+        <div class="container">
+        <br>
+        <div class="row">
+                <div class="col col-sm-4"></div>
+                <div class="col col-sm-4">
+                        <h1 style="font-family: 'Times New Roman', Times, serif;">CALCULATOR</h1>
+                </div>
+                <div class="col col-sm-4"></div>
+        </div>
+        <!-- <div style="width: 1200px;"> -->
+                <div class="row">
+                        <div class=" col-sm-4"></div>
+                        <div class=" col-sm-4" style="border: solid 2px black; background-color:darkgrey"><br>
+                                <div class="row"><input type="text" class="form-control" id="disp1">
+
+                                </div><br>
+                                <div class="row">
+                                        <div class="col col-sm-4"><button type="button" class="btn btn-block"
+                                                        style="background-color: white;" id="btn1" value="+"
+                                                        onclick="infoChange1(this)">+</button></div>
+                                        <div class="col col-sm-4"><button type="button" id="btn2" class="btn  btn-block"
+                                                        style="background-color: white;" value="-"
+                                                        onclick="infoChange2(this)">-</button></div>
+                                        <div class="col col-sm-4"><button type="button" id="btn3" class="btn btn-block "
+                                                        style="background-color: white;" value="*"
+                                                        onclick="infoChange3(this)">*</button></div>
+                                </div><br>
+                                <div class="row">
+                                        <div class="col col-sm-4"><button type="button"
+                                                        class="btn btn-primary btn-block" id="btn4" value="/"
+                                                        onclick="infoChange4(this)">/</button>
+                                        </div>
+                                        <div class="col col-sm-4"><button type="button"
+                                                        class="btn btn-primary btn-block" id="btn5" value="%"
+                                                        onclick="infoChange5(this)">%</button>
+                                        </div>
+                                        <div class="col col-sm-4"><button type="button"
+                                                        class="btn btn-primary btn-block" id="btn6" value="AC"
+                                                        onclick="clearData()">
+                                                        AC</button> </div>
+                                </div> <br>
+                                <div class="row">
+                                        <div class="col col-sm-4"><button type="button"
+                                                        class="btn btn-primary btn-block" id="btn7" value="1"
+                                                        onclick="infoChange7(this)">1</button>
+                                        </div>
+                                        <div class=" col col-sm-4"><button type="button" id="btn8"
+                                                        class="btn btn-primary btn-block" value="2"
+                                                        onclick="infoChange8(this)">2</button>
+                                        </div>
+                                        <div class="col col-sm-4"><button type="button" id="btn9"
+                                                        class="btn btn-primary btn-block" value="3"
+                                                        onclick="infoChange9(this)">3</button>
+                                        </div>
+                                </div><br>
+                                <div class="row">
+                                        <div class="col col-sm-4"><button type="button" id="btn10"
+                                                        class="btn btn-primary btn-block" value="4"
+                                                        onclick="infoChange10(this)">4</button>
+                                        </div>
+                                        <div class="col col-sm-4"><button type="button" id="btn11"
+                                                        class="btn btn-primary btn-block" value="5"
+                                                        onclick="infoChange11(this)">5</button>
+                                        </div>
+                                        <div class="col col-sm-4"><button type="button" id="btn12"
+                                                        class="btn btn-primary btn-block" value="6"
+                                                        onclick="infoChange12(this)">6</button>
+                                        </div>
+                                </div><br>
+                                <div class="row">
+                                        <div class="col col-sm-4"><button type="button" id="btn13"
+                                                        class="btn btn-primary btn-block" value="7"
+                                                        onclick="infoChange13(this)">7</button>
+                                        </div>
+                                        <div class="col col-sm-4"><button type="button" id="btn14"
+                                                        class="btn btn-primary btn-block" value="8"
+                                                        onclick="infoChange14(this)">8</button>
+                                        </div>
+                                        <div class="col col-sm-4"><button type="button" id="btn15"
+                                                        class="btn btn-primary btn-block" value="9"
+                                                        onclick="infoChange15(this)">9</button>
+                                        </div>
+                                </div><br>
+                                <div class="row">
+                                        <div class="col col-sm-4"><button type="button" id="btn16" class="btn btn-block"
+                                                        style="background-color: white;" value="10"
+                                                        onclick="infoChange16(this)">.</button>
+                                        </div>
+                                        <div class="col col-sm-4"><button type="button" id="btn17"
+                                                        class="btn btn-primary btn-block" value="0"
+                                                        onclick="infoChange17(this)">0</button>
+                                        </div>
+                                        <div class="col col-sm-4"><button type="button" id="btn18" class="btn btn-block"
+                                                        value="AC" onclick="backSpace()"
+                                                        style="background-color: white;">BACK</button>
+                                        </div>
+
+                                </div><br>
+                                <div class="row">
+                                        <div class="col col-sm-12">
+                                                <button type="button" id="btn19" value="=" onclick="performOp()"
+                                                        class="btn btn-success btn-block">=</button></div>
+                                </div>
+                               
+                        </div>
+                        <div class="col-sm-4"></div>
+                </div>
+</div>
+
+</body>
+
+</html>

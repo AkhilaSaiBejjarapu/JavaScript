@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <script>
+            function uprlwr() {
+                var a=document.getElementById("text");
+                 a.value=a.value.toUpperCase();
+                alert(a.value);
+            }
+            function lwrupr() {
+                var a=document.getElementById("text");
+                a.value=a.value.toLowerCase();
+                alert(a.value);
+            }
+        </script>
+    </head>
+    <body>
+        <input type="text" id="text">
+        <input type="button" value="Upper" onclick="uprlwr()">
+        <input type="button" value="Lower" onclick="lwrupr()">
+    </body>
+</html>

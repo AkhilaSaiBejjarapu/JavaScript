@@ -1,0 +1,34 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+       
+        
+       <img id="image" onmouseout="unzoom()" onmouseover="zoom()" width="400px" height="200px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXSxEO6IpZ7A3zdkPiUkKgg3RDhDCxR5-aNA&usqp=CAU">
+
+           
+       <script> 
+
+                 var image=document.getElementById("image").style;
+       
+           function zoom(){
+
+                       image.width="430";
+                       image.height="210"
+
+           }
+
+           function unzoom(){
+
+                     image.width="400";
+                     image.height="200"
+
+          }
+            
+       </script>
+
+    
+    
+    </body>
+</html>

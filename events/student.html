@@ -1,0 +1,75 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script>
+        function infoStore() {
+            var n = document.getElementById("view").value;
+            console.log(n);
+            if (n == "student") {
+                document.getElementById("papah").style.display = "block";
+            }
+            else {
+                document.getElementById("papah").style.display = "none";
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container"><br>
+        <div class="row">
+            <div class="col-sm-4"></div>
+            <div class="col-sm-4">
+                <h1>Login Form</h1>
+            </div>
+            <div class="col-sm-4"></div>
+        </div><br>
+        <div class="row">
+            <div class="col-sm-4"></div>
+            <div class="col-sm-4">
+                <select name="student" id="view" onchange="infoStore()" class="form-control">
+                    <option value="select">Select: </option>
+                    <option value="student">Student:</option>
+                    <option value="select">Father: </option>
+                </select>
+            </div>
+            <div class="col-sm-4"></div>
+        </div><br>
+        <div id="stud">
+            <div class="row">
+                <div class="col-sm-4"></div>
+                <div class="col-sm-4"><input type="text" id="name" placeholder="enter name:"></div>
+                <div class="col-sm-4"></div>
+            </div><br>
+            <div class="row">
+                <div class="col-sm-4"></div>
+                <div class="col-sm-4"><input type="text" id="phone" placeholder="enter phno:"></div>
+                <div class="col-sm-4"></div>
+            </div><br>
+            <div class="row">
+                <div class="col-sm-4"></div>
+                <div class="col-sm-4"><input type="text" id="mail" placeholder="enter maild:"></div>
+                <div class="col-sm-4"></div>
+            </div><br>
+            <div id="papah">
+                <div class="row">
+                    <div class="col-sm-4"></div>
+                    <div class="col-sm-4"><input type="text" id="college" placeholder="enter clgname:"></div>
+                    <div class="col-sm-4"></div>
+                </div><br>
+           
+            <div class="row">
+                <div class="col-sm-4"></div>
+                <div class="col-sm-4"><input type="text" id="place" placeholder="enter clgplace:"></div>
+                <div class="col-sm-4"></div>
+            </div><br>
+        </div>
+        </div>
+    </div>
+</body>
+
+</html>

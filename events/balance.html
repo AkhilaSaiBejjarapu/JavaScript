@@ -1,0 +1,54 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script>
+        function balanceSheet() {
+            var t = document.getElementById("tol").value;
+            console.log(t);
+            var p = document.getElementById("py").value;
+
+            var b = t - p;
+            console.log(b);
+            document.getElementById("result").value = b;
+        }
+    </script>
+</head>
+<body>
+    <div class="container"><br>
+        <div class="row">
+            <div class="col-sm-4"></div>
+            <div class="col-sm-4">
+                <h1>Balance Sheet</h1>
+            </div>
+            <div class="col-sm-4"></div>
+        </div><br>
+        <div class="col-sm-4"></div>
+    </div><br>
+    <div class="row">
+        <div class="col-sm-4"></div>
+        <div class="col-sm-2"><label for="total">Total:</div>
+        <div class="col-sm-2"><input type="text"  placeholder="Total" oninput="balanceSheet()" id="tol"></div>
+        <div class="col-sm-4"></div>
+    </div><br>
+    <div class="row">
+        <div class="col-sm-4"></div>
+        <div class="col-sm-2"><label for="pay">Pay:</div>
+        <div class="col-sm-2"><input type="text"  placeholder="Pay" oninput="balanceSheet()" id="py" ></div>
+        <div class="col-sm-4"></div>
+    </div><br>
+    <div class="row">
+        <div class="col-sm-4"></div>
+        <div class="col-sm-2"><label for="balance">Balance:</div>
+        <div class="col-sm-2"><input type="text"  placeholder="Balance" id="result" oninput="balanceSheet()"></div>
+        <div class="col-sm-4"></div>
+    </div><br>
+
+    </div>
+</body>
+
+</html>

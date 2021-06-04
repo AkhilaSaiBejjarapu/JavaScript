@@ -1,0 +1,63 @@
+<html>
+    <head>
+
+    </head>
+
+     <body>
+        <form>
+            <div class="container"><br>
+                <div class="row">
+                    <div class="col col-sm-4"></div>
+                    <div class="col col-sm-4">USERNAME<input type="text" id="username"></div>
+                    <div class="col col-sm-4"></div>
+        
+                </div>
+                <div class="row">
+                    <div class="col col-sm-4"></div>
+                    <div class="col col-sm-4"><button onclick="list()">SUBMIT</button></div>
+                    <div class="col col-sm-4"></div>
+                </div>
+            </div>
+        </form> 
+
+
+
+
+        <!-- <form>
+
+        Username: <input type="text" id="username"> 
+        <button onclick="usernameCheck()">Submit</button>
+        </form> -->
+
+         <script>
+         
+               function usernameCheck(){
+                    event.preventDefault();
+                    var username=document.getElementById("username").value;
+
+                    var usernames=["ravi","kiran","rajesh"];
+
+                    //for loop - for each 
+
+                    var isUserFound=false;
+                     usernames.forEach(function(uname){
+                             if(uname == username){
+                                  isUserFound=true;
+                             }
+                     }
+                     )
+                     console.log("isUserFound",isUserFound);
+                     if(isUserFound == true){
+                          alert("username already taken")
+                     }
+                     else
+                     {
+                         alert("username available");
+                     }
+
+               }
+         
+         </script>
+
+     </body>
+</html>

@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <script>
+            function slice(){
+                var a=document.getElementById("1").value;
+                var b=document.getElementById("2").value;
+                var c=document.getElementById("3").value;
+                var d=a.slice(b,c);
+            document.getElementById("4").value=d; 
+                
+            }
+        </script>
+        <body>
+            <input type="text" id="1">
+            <input type="text" id="2">
+            <input type="text" id="3">
+            <button onclick="slice()">slice</button>
+            <input type="text" id="4">
+        </body>
+    </head>
+</html>

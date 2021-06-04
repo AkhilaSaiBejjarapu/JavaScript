@@ -1,0 +1,44 @@
+<html>
+<head>
+    <link rel="stylesheet" href="bootstrap.css">
+    <script src="javascript.js"></script>
+    <script>
+        function checkFacto() {
+            var f,n,i;
+            f = 1;
+            n = document.getElementById("number").value;
+            for (var i = 1; i <=n; i++) {
+                f = f * i;
+            }
+            // var b = document.getElementById("number1").value;
+            // document.getElementById("number1").value = a;
+            document.getElementById("result").value = f;
+        }
+    </script>
+</head>
+
+<body>
+    <div class="container"><br>
+        <div class="row">
+            <div class="col-sm-4"></div>
+            <div class="col-sm-2"><label for="frst"> Number:</label></div>
+            <div class="col-sm-2"><input type="text" id="number" placeholder="enter number" class="form-control">
+            </div>
+            <div class="col-sm-4"></div>
+        </div><br>
+        <div class="row">
+            <div class="col-sm-4"></div>
+            <div class="col-sm-2"><label>Result:</label></div>
+            <div class="col-sm-2"><input type="text" id="result" placeholder="result" class="form-control"></div>
+            <div class="col-sm-4"></div>
+        </div><br>
+        <div class="row">
+            <div class="col-sm-6"></div>
+            <div class="col-sm-4"><button type="button" value="submit" class="btn btn-success"
+                    onclick="checkFacto()">Factorial</div>
+            <div class="col-sm-2"></div>
+        </div><br>
+    </div>
+</body>
+
+</html>

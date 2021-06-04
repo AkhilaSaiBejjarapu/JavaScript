@@ -1,0 +1,62 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+        <link rel="stylesheet"
+                href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+        <style>
+            body{
+                background-color: lightyellow;
+            }
+        </style>
+    </head>
+    <body>
+        <form>
+            <div class="container"><br>
+                <div class="row">
+                    <div class="col col-sm-4"></div>
+                    <div class="col col-sm-4">USERNAME<input type="text" id="username"></div>
+                    <div class="col col-sm-4"></div>
+        
+                </div>
+                <div class="row">
+                    <div class="col col-sm-4"></div>
+                    <div class="col col-sm-4"><button class="btn btn-primary" onclick="list()">SUBMIT</button></div>
+                    <div class="col col-sm-4"></div>
+                </div>
+            </div>
+        </form> 
+        <script>
+         
+            function list(){
+                 event.preventDefault();
+                 var name=document.getElementById("username").value;
+
+                 var usernames=["Akhila","Likhitha","Naveen","krupa"];
+
+                 //for loop - for each 
+
+                 var isUserFound=false;
+                  usernames.forEach(function(firstname){
+                          if(firstname == name){
+                               isUserFound=true;
+                          }
+                  }
+                  )
+                  console.log("isUserFound",isUserFound);
+                  if(isUserFound == true){
+                       alert("username already taken")
+                  }
+                  else
+                  {
+                      alert("username available");
+                  }
+
+            }
+      
+      </script>
+
+    </body>
+</html>

@@ -1,0 +1,36 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <h4 id="sys"></h4>
+    <script>
+        var system = { model: "Lenovo", os: "windows" };
+        function changeName()
+        {
+            document.getElementById("text1").value;
+        }
+        function changeColor()
+        {
+            document.getElementById("text2").value;
+        }
+        document.getElementById("sys").innerHTML = "The system name is:" + system.model + "<br>" 
+        + "The os is:" + system.os; 
+    </script>
+</head>
+<body>
+    <div class="row">
+        <div class="col-sm-4"></div>
+        <div class="col-sm-4"><input type="text" id="text1" onclick="changeName()"></div>
+        <div class="col-sm-4"></div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4"></div>
+        <div class="col-sm-4"><input type="text" id="text2" onclick="changeColor()"></div>
+        <div class="col-sm-4"></div>
+    </div>
+</body>
+</html>

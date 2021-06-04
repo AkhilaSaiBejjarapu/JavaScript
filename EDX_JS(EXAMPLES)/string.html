@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <style>
+            body{
+                background-color: darkseagreen;
+            }
+        </style>
+    </head>
+    <body>
+        <form>
+            <div class="row">
+                <div class="colcol-sm-4"></div>
+                <div class="col col-sm-2">ENTER MAIL ID</div>
+                <div class="col col-sm-2"><input type="text" id="mail"></div>
+                <div class="col col-sm-4"></div>
+            </div> 
+            <div class="row">
+                <div class="colcol-sm-4"></div>
+                <div class="col col-sm-2"><button onclick="emailcheck()">SUBMIT</button></div>
+                <div class="col col-sm-4"></div>
+            </div>
+            <h1 id="message"></h1>
+
+        </form>
+        <script>
+            function emailcheck(){
+                event.preventDefault();
+                var email=document.getElementById("mail").value;
+                email=email.trim();
+                if(email.includes("@gmail.com")){
+                    document.getElementById("message").innerHTML=email;
+                }
+                else{
+                    email=email.concat("@gmail.com");
+                    document.getElementById("message").innerHTML=email;
+                }
+            }
+        </script>
+    </body>
+</html>

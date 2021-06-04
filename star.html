@@ -1,0 +1,66 @@
+<html>
+    <head>
+        <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    </head>
+    <script>
+        function display1(){
+            document.getElementById("star1").style.color="green";
+            document.getElementById("text").value="1";
+        }
+        function display2(){
+            document.getElementById("star2").style.color="green";
+            document.getElementById("text").value="2";
+            document.getElementById("star2").value="disabled"
+        }
+        function display3(){
+            document.getElementById("star3").style.color="green";
+            document.getElementById("text").value="3";
+        }
+        function display4(){
+           document.getElementById("star4").style.color="green";
+            document.getElementById("text").value="4";
+        }
+        function display5(){
+            document.getElementById("star5").style.color="green";
+            document.getElementById("text").value="5";
+        }
+    </script>
+<body>
+    <div class="row">
+        <div class="col-sm-4"></div>
+        <div class="col-sm-4"><h1>star rating</h1></div>
+        <div class="col-sm-4"></div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4"></div>
+        <div class="col-sm-4">
+            <div style="border:2px solid black;height:100px;width:500px;">
+            <label style="font-size:90px" id="star1" onclick="display1()">&#9733;</label>
+            <label style="font-size:90px" id="star2" onclick="display2()">&#9733;</label>
+            <label style="font-size:90px" id="star3" onclick="display3()">&#9733;</label>
+            <label style="font-size:90px" id="star4" onclick="display4()">&#9733;</label>
+            <label style="font-size:90px" id="star5" onclick="display5()">&#9733;</label>
+            <div class="col-sm-4"></div>
+        </div>
+    </div>
+    </div>
+    <div class="row">
+            <div class="col-sm-4"></div>
+            <div class="col-sm-4"><h3> Thanks for rating:</h3></div>
+            <div class="col-sm-4"></div>
+        </div>
+        <div class="row">
+                <div class="col-sm-4"></div>
+                <div class="col-sm-4"><input type="text" id="text" disabled></div>
+                <div class="col-sm-4"></div>
+            </div>
+                
+</body>
+</html>

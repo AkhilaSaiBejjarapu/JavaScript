@@ -1,0 +1,31 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script>
+        function checkAddition() {
+
+            var a = parseFloat(document.getElementById("number").value);
+            console.log(a);
+            var b = parseFloat(document.getElementById("number1").value);
+            var c = a + b;
+            document.getElementById("result").value = c;
+        }
+    </script>
+</head>
+<body>
+    
+    <label>Enter frst Number:</label>
+    <input type="text" id="number" placeholder="enter frst num" class="form-control">
+    <label>Enter second Number:</label>
+    <input type="text" id="number1" placeholder="enter second num"class="form-control"><br>
+    <button type="button" value="submit" onclick="checkAddition()" class=" btn btn-warning">SUBMIT</button><br>
+    <label>Result:</label>
+    <input type="text" id="result"><br>
+</body>
+
+</html>
